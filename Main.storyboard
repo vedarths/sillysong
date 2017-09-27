@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dly-PA-9bW">
+                                <rect key="frame" x="61" y="20" width="252" height="98"/>
+                                <color key="backgroundColor" red="0.95385482050868797" green="1" blue="0.99474194607327693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="hnI-iR-qLw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" indicatorStyle="white" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rNS-bR-uZY">
+                                <rect key="frame" x="61" y="292" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="A5d-BC-RSc"/>
+                                    <constraint firstAttribute="width" constant="240" id="uNU-Zf-JhV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uhg-4N-d1B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="HSQ-Bd-M0U">
+                                <rect key="frame" x="113" y="166" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.97446925143223984" green="0.95633085395484607" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Enter your name...">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Avenir-Book"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="hzY-4p-vz9"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="JgJ-T8-gJc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42353807268021126" green="0.71939155766880314" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dly-PA-9bW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bf9-3r-STb"/>
+                            <constraint firstItem="dly-PA-9bW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FSa-tx-TQQ"/>
+                            <constraint firstItem="dly-PA-9bW" firstAttribute="leading" secondItem="rNS-bR-uZY" secondAttribute="leading" id="HV2-K7-3Ya"/>
+                            <constraint firstItem="HSQ-Bd-M0U" firstAttribute="top" secondItem="dly-PA-9bW" secondAttribute="bottom" constant="48" id="INs-ao-Xgr"/>
+                            <constraint firstItem="rNS-bR-uZY" firstAttribute="centerY" secondItem="HSQ-Bd-M0U" secondAttribute="centerY" id="MIa-iF-iFM"/>
+                            <constraint firstItem="rNS-bR-uZY" firstAttribute="top" secondItem="HSQ-Bd-M0U" secondAttribute="bottom" constant="96" id="f91-fp-nHI"/>
+                            <constraint firstItem="rNS-bR-uZY" firstAttribute="top" secondItem="HSQ-Bd-M0U" secondAttribute="bottom" constant="96" id="jWz-X6-cQY"/>
+                            <constraint firstItem="rNS-bR-uZY" firstAttribute="centerX" secondItem="HSQ-Bd-M0U" secondAttribute="centerX" id="qLP-Lu-tKy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HSQ-Bd-M0U" secondAttribute="trailing" constant="130" id="s2N-7h-ecC"/>
+                            <constraint firstItem="HSQ-Bd-M0U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" id="sgg-dO-sas"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="HSQ-Bd-M0U" id="xyC-PU-sod"/>
+                        <outlet property="songTextView" destination="rNS-bR-uZY" id="ocP-xD-Wdi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+</document>
